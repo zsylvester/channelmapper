@@ -569,13 +569,13 @@ def create_new_bank_coordinates(cropped_polys_new, x, y):
     plt.axis('equal');
     return rbxn, rbyn, lbxn, lbyn
 
-def get_bti_polys(dates,ts1,ts2,deltas,W,kl):
+def get_bti_polys(dates, dirname, ts1, ts2, deltas, W, kl):
     # fw = 'fake width' needed to create wide channel segments
     # read the centerline shapefiles for two timesteps
     date1 = dates[ts1]
     date2 = dates[ts2]
-    filename1 = '/Users/zoltan/Dropbox/Channels/Fluvial/Mamore_cutoff/new_GIS_data/cline_'+date1[:4]
-    filename2 = '/Users/zoltan/Dropbox/Channels/Fluvial/Mamore_cutoff/new_GIS_data/cline_'+date2[:4]
+    filename1 = dirname + 'cline_'+date1[:4]
+    filename2 = dirname + 'cline_'+date2[:4]
     sf1 = shapefile.Reader(filename1).shapes()
     cl1 = np.array(sf1[0].points)
     sf2 = shapefile.Reader(filename2).shapes()
@@ -597,7 +597,7 @@ def get_bti_polys(dates,ts1,ts2,deltas,W,kl):
     migr_rate = medfilt(savgol_filter(migr_rate,51,3),kernel_size=5) 
 
     f = 0.5
-    filename = '/Users/zoltan/Dropbox/Channels/Fluvial/Mamore_cutoff/new_GIS_data/polys_'+date1[:4]
+    filename = dirname + 'polys_'+date1[:4]
     sf = shapefile.Reader(filename).shapes()
     polys = []
     for i in range(0,len(sf)):
