@@ -10,7 +10,7 @@ The output from mapping a channel consists of the two banks, a centerline, and a
 <img src="https://github.com/zsylvester/channelmapper/blob/main/banks_and_polygons.png" width="500">
 </p>
 
-This way, high-quality measurements can be derived even in bends with high curvatures and unusual geometries like the one shown above. The ['Channelmapper.ipynb' notebook](https://github.com/zsylvester/channelmapper/blob/main/Channelmapper.ipynb) goes through the workflow of mapping a segment of the Mamore River in Bolivia, using a Landsat scene from 2018. The initial estimates of the centerline and banks are obtained using the 'rivamap' package; however, the rest of the workflow (for getting the polygons and the even sampling along the lines) can be applied to any kind of channel bank data.
+This way, high-quality measurements can be derived even in bends with high curvatures and unusual geometries like the one shown above. The ['Channelmapper.ipynb' notebook](https://github.com/zsylvester/channelmapper/blob/main/Channelmapper.ipynb) goes through the workflow of mapping a segment of the Mamore River in Bolivia, using a Landsat scene from 2018. The initial estimates of the centerline and banks are obtained using the ['rivamap'](https://github.com/isikdogan/rivamap) package; however, the rest of the workflow (for getting the polygons and the even sampling along the lines) can be applied to any kind of channel bank data.
 
 If the migration of the same channel segment is mapped over multiple time steps, the workflow illustrated in the [second notebook](https://github.com/zsylvester/channelmapper/blob/main/Create_bars_and_BTI_polygons.ipynb) can be used to generate shapefiles that describe the deposits and cutoffs left behind. The terminology used is shown below.
 
