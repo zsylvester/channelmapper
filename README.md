@@ -12,7 +12,7 @@ This way, high-quality measurements can be derived even in bends with high curva
 
 If the migration of the same channel segment is mapped over multiple time steps, the workflow illustrated in the second notebook () can be used to generate shapefiles that describe the deposits and cutoffs left behind. The terminology used is shown below.
 
-<img src="https://github.com/zsylvester/channelmapper/blob/bar_terminology.png" width="500">
+<img src="https://github.com/zsylvester/channelmapper/blob/main/bar_terminology.png" width="500">
 
 In this case, the 'bar type index' parameter is used to color the bars, but other parameters such as curvature, migration rate, or age can be used as well. See the paper for more detail. 
 
