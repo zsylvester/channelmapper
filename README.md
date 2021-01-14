@@ -6,13 +6,17 @@ There are two key uses of 'channelmapper': (1) map channels in satellite imagery
 
 The output from mapping a channel consists of the two banks, a centerline, and a set of polygons of predefined length that describe the channel and can be used to display properties along the channel. The banks and the centerline have the same number of points and the polygons do not have self-intersections:
 
+<p align="center">
 <img src="https://github.com/zsylvester/channelmapper/blob/main/banks_and_polygons.png" width="500">
+</p>
 
 This way, high-quality measurements can be derived even in bends with high curvatures and unusual geometries like the one shown above. The 'Channelmapper.ipynb' notebook goes through the workflow of mapping a segment of the Mamore River in Bolivia, using a Landsat scene from 2018. The initial estimates of the centerline and banks are obtained using the 'rivamap' package; however, the rest of the workflow (for getting the polygons and the even sampling along the lines) can be applied to any kind of channel bank data.
 
-If the migration of the same channel segment is mapped over multiple time steps, the workflow illustrated in the second notebook () can be used to generate shapefiles that describe the deposits and cutoffs left behind. The terminology used is shown below.
+If the migration of the same channel segment is mapped over multiple time steps, the workflow illustrated in the second notebook ('Create_bars_and_BTI_polygons.ipynb') can be used to generate shapefiles that describe the deposits and cutoffs left behind. The terminology used is shown below.
 
+<p align="center">
 <img src="https://github.com/zsylvester/channelmapper/blob/main/bar_terminology.png" width="500">
+</p>
 
 In this case, the 'bar type index' parameter is used to color the bars, but other parameters such as curvature, migration rate, or age can be used as well. See the paper for more detail. 
 
