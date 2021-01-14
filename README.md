@@ -10,3 +10,9 @@ The output from mapping a channel consists of the two banks, a centerline, and a
 
 This way, high-quality measurements can be derived even in bends with high curvatures and unusual geometries like the one shown above. The 'Channelmapper.ipynb' notebook goes through the workflow of mapping a segment of the Mamore River in Bolivia, using a Landsat scene from 2018. The initial estimates of the centerline and banks are obtained using the 'rivamap' package; however, the rest of the workflow (for getting the polygons and the even sampling along the lines) can be applied to any kind of channel bank data.
 
+If the migration of the same channel segment is mapped over multiple time steps, the workflow illustrated in the second notebook () can be used to generate shapefiles that describe the deposits and cutoffs left behind. The terminology used is shown below.
+
+<img src="https://github.com/zsylvester/channelmapper/blob/bar_terminology.png" width="500">
+
+In this case, the 'bar type index' parameter is used to color the bars, but other parameters such as curvature, migration rate, or age can be used as well. See the paper for more detail. 
+
